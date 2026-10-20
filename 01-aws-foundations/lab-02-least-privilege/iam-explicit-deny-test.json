@@ -1,0 +1,22 @@
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowIAMInventory",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListUsers",
+        "iam:ListGroups",
+        "iam:ListRoles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenyRoleListing",
+      "Effect": "Deny",
+      "Action": "iam:ListRoles",
+      "Resource": "*"
+    }
+  ]
+}
